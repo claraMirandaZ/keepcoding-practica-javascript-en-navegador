@@ -1,0 +1,88 @@
+/* Header */
+.title {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* Main. Savings */
+.total {
+  text-align: center;
+  margin: 32px;
+}
+
+.savings__title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Main. Income + expenses = balance */
+.balance {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.income__title, .expenses__title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Main. History */
+.history__title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+/* Main. Operate/form */
+.add__title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.transactions {
+  display: grid;
+}
+
+.concept, .qty {
+  padding: 8px 5px;
+}
+
+.instructions {
+  padding: 0 0 8px 5px;
+  font-size: x-small;
+}
+
+.submit__btn {
+  background-color: mediumslateblue;
+  border: none;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 25px;
+  width: 175px;
+  justify-self: center;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  justify-items: center;
+}
+
+.contact_msg {
+  font-size: 12px;
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.social_logo {
+  height: 50px;
+}
