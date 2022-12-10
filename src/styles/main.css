@@ -15,6 +15,7 @@
 .savings_title {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .savings_qty {
@@ -49,6 +50,16 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 5px;
+}
+
+.income_qty {
+  color: darkseagreen;
+  font-weight: bolder;
+}
+
+.expenses_qty {
+  color: indianred;
+  font-weight: bolder;
 }
 
 /* Main. Operate/form */
@@ -126,13 +137,47 @@ input:focus {
   border-bottom: 2px solid gainsboro;
 }
 
+.records li {
+  font-size: 14px;
+  color: rebeccapurple;
+  border: 1px solid thistle;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.records li.positive {
+  border-right: 6px solid darkseagreen;
+}
+
+.records li.negative {
+  border-right: 6px solid indianred;
+}
+
+#delete {
+  cursor: pointer;
+  opacity: 0;
+  transform: translate(-105%, -10%);
+  transition: opacity 0.3s ease;
+}
+
+.records li:hover #delete {
+  opacity: 1;
+}
+
+.record_qty {
+  margin-left: auto;
+}
+
 /* Footer */
 .footer {
   display: grid;
   justify-items: center;
 }
 
-.contact_msg {
+.authorship {
+  color: indigo;
   font-size: 12px;
   margin-top: 5rem;
   margin-bottom: 0.5rem;

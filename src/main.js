@@ -73,12 +73,17 @@ function addTransaction(transaction) {
   // Variable para los elementos de la lista (ul)
   const elt = document.createElement('li');
 
+  const classSign = amount < 0 ? 'negative' : 'positive';
+  elt.classList.add(classSign);
+
   // Añadimos al elemento (li) una clase basada en su value
   elt.classList.add(transaction.amount < 0 ? 'negative' : 'positive');
   // Pintamos dentro de ese elemento (li) el número absoluto con su signo
   elt.innerHTML = `<i id="delete" role="button">❌</i> <span>${
     transaction.concept
-  }</span>, <span>${sign}${Math.abs(transaction.amount).toFixed(2)}</span>`;
+  }</span><span class="record_qty">${sign}${Math.abs(
+    transaction.amount
+  ).toFixed(2)}</span>`;
 
   // A nuestra lista (ul) le ponemos un elemento (li)
   list.appendChild(elt);

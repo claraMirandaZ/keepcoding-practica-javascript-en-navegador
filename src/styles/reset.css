@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Roboto Mono', monospace;
-	margin: 6rem auto;
+	margin: 5rem auto auto;
 	max-width: 26rem;
 }
 
