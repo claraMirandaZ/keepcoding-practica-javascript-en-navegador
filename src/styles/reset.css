@@ -19,7 +19,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	text-decoration: none;
 	list-style: none;
-	font-family: Helvetica, sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -30,6 +29,9 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	font-family: 'Roboto Mono', monospace;
+	margin: 6rem auto;
+	max-width: 26rem;
 }
 
 ol, ul {
@@ -49,10 +51,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-body {
-	margin: 0 auto;
-	max-width: 35rem;
-	margin-top: 3rem;
 }

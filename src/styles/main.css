@@ -1,7 +1,8 @@
 /* Header */
 .title {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bolder;
+  color: rebeccapurple;
   text-align: center;
 }
 
@@ -12,17 +13,33 @@
 }
 
 .savings_title {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: bold;
+}
+
+.savings_qty {
+  font-size: 1.75rem;
+  color: slateblue;
+  font-weight: bolder;
 }
 
 /* Main. Income + expenses = balance */
 .balance {
+  background-color: lavender;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 25px;
+  padding: 25px 5px;
+}
+
+.balance > div {
+  flex: 1;
+}
+
+.balance > div:first-of-type {
+  border-right: 2px solid mediumslateblue;
 }
 
 .income_title,
@@ -31,13 +48,16 @@
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 /* Main. Operate/form */
 .transactions_title {
   font-size: 18px;
   font-weight: bold;
-  padding: 8px;
+  margin-top: 35px;
+  padding: 10px 10px;
+  border-bottom: 2px solid lavender;
 }
 
 .transactions {
@@ -49,20 +69,51 @@
   padding: 8px 5px;
 }
 
+.transactions > input {
+  border: 1px solid lavender;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+input {
+  color: mediumorchid;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-style: italic;
+}
+
+input::placeholder {
+  color: thistle;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-style: italic;
+}
+
+input:focus {
+  color: mediumorchid;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-style: italic;
+  outline: none;
+}
+
 .instructions {
-  padding: 0 0 8px 5px;
+  color: silver;
   font-size: x-small;
+  padding: 0 0 8px 5px;
 }
 
 .submit_btn {
   background-color: mediumslateblue;
   border: none;
+  border-radius: 3px;
   color: whitesmoke;
+  font-family: 'Roboto Mono', monospace;
   font-size: 16px;
   font-weight: bold;
   padding: 10px;
   margin-top: 25px;
-  width: 175px;
+  width: 225px;
   justify-self: center;
 }
 
@@ -70,7 +121,9 @@
 .history_title {
   font-size: 18px;
   font-weight: bold;
-  padding: 8px;
+  margin-top: 35px;
+  padding: 10px 10px;
+  border-bottom: 2px solid gainsboro;
 }
 
 /* Footer */
