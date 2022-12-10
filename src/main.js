@@ -25,6 +25,8 @@ form.addEventListener('submit', (ev) => {
   };
   // Añado transacciones al array con el método push
   transactions.push(transaction);
+  // Guarda el array actualizado tras el push
+  localStorage.setItem('transactionsHistory', JSON.stringify(transactions));
 
   addTransaction(transaction);
   updateBalance(transaction);
@@ -52,10 +54,11 @@ function updateBalance() {
     .reduce((bal, value) => (bal += value), 0)
     .toFixed(2);
   // Gastos (números negativos)
-  const expenses =
+  const expenses = (
     amounts
       .filter((value) => value < 0)
-      .reduce((bal, value) => (bal += value), 0) * -(1).toFixed(2);
+      .reduce((bal, value) => (bal += value), 0) * -1
+  ).toFixed(2);
 
   savings.innerHTML = `${total} €`;
   income.innerHTML = `${earnings} €`;
@@ -75,7 +78,7 @@ function addTransaction(transaction) {
   // Pintamos dentro de ese elemento (li) el número absoluto con su signo
   elt.innerHTML = `<i id="delete" role="button">❌</i> <span>${
     transaction.concept
-  }</span>, <span>${sign}${Math.abs(transaction.amount)}</span>`;
+  }</span>, <span>${sign}${Math.abs(transaction.amount).toFixed(2)}</span>`;
 
   // A nuestra lista (ul) le ponemos un elemento (li)
   list.appendChild(elt);
@@ -90,12 +93,30 @@ function addTransaction(transaction) {
 function removeTransaction(id) {
   transactions = transactions.filter((transaction) => transaction.id !== id);
 
+  // Guarda el array actualizado tras el filter
+  localStorage.setItem('transactionsHistory', JSON.stringify(transactions));
+
   startApp();
+}
+
+/* Comprobar el localStorage */
+function getInitialTransactions() {
+  let localData = localStorage.getItem('transactionsHistory');
+  // Si localData no es nulo
+  if (localData) {
+    // Devuelve el array guardado en localStorage como string
+    return JSON.parse(localData);
+  } else {
+    return [];
+  }
 }
 
 /* Inicializar app */
 function startApp() {
   list.innerHTML = '';
+  // Si hay algo guardado en localStorage, lo trae antes de
+  transactions = getInitialTransactions();
+  // pintarlo
   transactions.forEach(addTransaction);
   updateBalance();
 }
