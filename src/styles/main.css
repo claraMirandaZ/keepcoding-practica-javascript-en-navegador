@@ -6,15 +6,14 @@
 }
 
 /* Main. Savings */
-.total {
+.savings {
   text-align: center;
   margin: 32px;
 }
 
-.savings__title {
+.savings_title {
   font-size: 18px;
   font-weight: bold;
-  text-align: center;
 }
 
 /* Main. Income + expenses = balance */
@@ -26,21 +25,16 @@
   padding: 25px;
 }
 
-.income__title, .expenses__title {
+.income_title,
+.expenses_title {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-}
-
-/* Main. History */
-.history__title {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 8px;
+  text-transform: uppercase;
 }
 
 /* Main. Operate/form */
-.add__title {
+.transactions_title {
   font-size: 18px;
   font-weight: bold;
   padding: 8px;
@@ -50,7 +44,8 @@
   display: grid;
 }
 
-.concept, .qty {
+.concept,
+.qty {
   padding: 8px 5px;
 }
 
@@ -59,7 +54,7 @@
   font-size: x-small;
 }
 
-.submit__btn {
+.submit_btn {
   background-color: mediumslateblue;
   border: none;
   color: whitesmoke;
@@ -69,6 +64,13 @@
   margin-top: 25px;
   width: 175px;
   justify-self: center;
+}
+
+/* Main. History */
+.history_title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px;
 }
 
 /* Footer */
